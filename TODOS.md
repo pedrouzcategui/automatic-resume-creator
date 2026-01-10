@@ -2,6 +2,7 @@
 
 The first iteration of this project, is to be able to:
 
-- Extract keywords from the job description
-- Check which skills you have and which skills you do not.
+- ~~Extract keywords from the job description~~
+- ~~Check which skills you have and which skills you do not.~~
 - Re-write your job experiences with said skills
+- ONLY hardcoded tech skills
