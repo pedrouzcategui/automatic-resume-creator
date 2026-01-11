@@ -8,5 +8,5 @@ What I want to do, is to:
     - Skills (I should only keep a certain number of skills)
     - Courses (This might be in another iteration)
 '''
-def parse_curriculum():
+def extract_job_details_from_cv(cv):
     pass
