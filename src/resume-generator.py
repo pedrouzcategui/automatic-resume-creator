@@ -16,5 +16,5 @@ Output: Generated Curriculum Tailored for Job Position
 - Resume is Harvard Style
 '''
 
-def main(): 
+def main():
     pass
