@@ -3,28 +3,38 @@ from google.genai import types
 from dotenv import load_dotenv
 
 load_dotenv()
-# The client gets the API key from the environment variable `GEMINI_API_KEY`.
-client = genai.Client()
 
-response = client.models.generate_content(
-    model="gemini-2.5-flash", 
-    config=types.GenerateContentConfig(
-        system_instruction=""
-    ),
-    contents="Explain how AI works in a few words"
-)
 
-# Maybe I can just return an object of 4 keys instead
-def change_job_experience_description():
-    pass
+class GeminiService:
+    def __init__(
+        self,
+        model: str = "gemini-2.5-flash",
+        system_instruction: str = "",
+        config: types.GenerateContentConfig | None = None,
+    ):
+        self.client = genai.Client()
+        self.model = model
+        self.config = config or types.GenerateContentConfig(
+            system_instruction=system_instruction
+        )
 
-def change_skills_based_on_job_description():
-    pass
+    def generate(self, prompt: str):
+        return self.client.models.generate_content(
+            model=self.model,
+            config=self.config,
+            contents=prompt,
+        )
 
-def change_certifications_based_on_job_description():
-    pass
 
-def change_about_me_based_on_job_description():
-    pass
-
-print(response.text)
+def generate_with_gemini(
+    prompt: str,
+    model: str = "gemini-2.5-flash",
+    system_instruction: str = "",
+    config: types.GenerateContentConfig | None = None,
+):
+    service = GeminiService(
+        model=model,
+        system_instruction=system_instruction,
+        config=config,
+    )
+    return service.generate(prompt)
