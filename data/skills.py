@@ -1,5 +1,5 @@
-# Create a list of skills that you want to extract from the curriculum
-skills = [
+# Create a set of skills that you want to extract from the curriculum
+skills = {
     "Python",
     "JavaScript",
     "Java",
@@ -50,4 +50,4 @@ skills = [
     "Firebase",
     "Elixir",
     "Haskell"
-]
+}
