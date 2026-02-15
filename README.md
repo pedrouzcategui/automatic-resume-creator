@@ -22,8 +22,7 @@ Right now, Automatic Resume Generator is thought for Software Engineers and alik
 
 ## How to install
 
-I am using `uv`, the greatest package manager for python. You just need to install `uv` and then run:
+I am using `uv`, the greatest package manager for Python. You just need to install `uv` [(see installation instructions here)](https://docs.astral.sh/uv/getting-started/installation/) and then run:
 
-1. `uv start`
-2. `uv install`
-3. `uv run main.py`
+`uv install`
+`uv run main.py`
